@@ -1,0 +1,35 @@
+package minjae.academy.audit;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.EntityListeners;
+import jakarta.persistence.MappedSuperclass;
+import lombok.Data;
+import org.springframework.data.annotation.CreatedBy;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import java.time.LocalDateTime;
+
+@Data
+@MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
+public abstract class BaseTimeAndAuthorEntity {
+
+    @CreatedBy
+    @Column(updatable = false, length = 36)
+    private String createdBy;  // 생성자
+
+    @CreatedDate
+    @Column(updatable = false, length = 36)
+    private LocalDateTime createdAt;  // 생성 시간
+
+    @LastModifiedBy
+    private String modifiedBy;  // 수정자
+    @LastModifiedDate
+    private LocalDateTime modifiedAt;
+}
+
+
+
