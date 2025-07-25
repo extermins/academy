@@ -36,12 +36,7 @@ public class User extends BaseTimeAndAuthorEntity {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    private Integer zipcode;
-    //도로명 주소
-    private String city;
-    //상세주소
     private String address;
-
 
     //로그인 카운트 5회 이상이면 로그인 못하도록 하는 컬럼
     private int loginCount;
