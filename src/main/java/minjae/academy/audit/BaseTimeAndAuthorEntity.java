@@ -29,6 +29,15 @@ public abstract class BaseTimeAndAuthorEntity {
     private String modifiedBy;  // 수정자
     @LastModifiedDate
     private LocalDateTime modifiedAt;
+
+    @Column(name = "is_deleted")
+    private Boolean isDeleted = false;
+
+    @Column(name = "deleted_at")
+    private LocalDateTime deletedAt;
+
+    @Column(name = "deleted_by")
+    private String deletedBy;
 }
 
 
