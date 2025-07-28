@@ -11,11 +11,11 @@ import minjae.academy.audit.BaseTimeAndAuthorEntity;
 @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
 @Entity
-public class Classfication extends BaseTimeAndAuthorEntity {
+public class Classification extends BaseTimeAndAuthorEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(length = 36,updatable = false, nullable = false)
-    private String uuid;
+    private String classificationUuid;
 
     private String name;
     private Integer depth;

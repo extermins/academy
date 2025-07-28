@@ -16,10 +16,12 @@ public class SubjectApplicant extends BaseTimeAndAuthorEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(length = 36,updatable = false, nullable = false)
-    private String uuid;
+    private String applicantUuid;
 
     //신청과정
-    private String subject;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "subjectUuid")
+    private Subject subject;
     //신청인 uuid, name
     private String applicant;
     private String applicantName;

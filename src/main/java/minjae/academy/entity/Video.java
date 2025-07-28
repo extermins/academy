@@ -10,7 +10,7 @@ import minjae.academy.audit.BaseTimeAndAuthorEntity;
 public class Video extends BaseTimeAndAuthorEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private String uuid;
+    private String videoUuid;
 
     //제목,설명,제작자
     private String title;

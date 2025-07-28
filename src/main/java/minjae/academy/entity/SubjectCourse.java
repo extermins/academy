@@ -15,10 +15,12 @@ public class SubjectCourse extends BaseTimeAndAuthorEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(length = 36,updatable = false, nullable = false)
-    private String uuid;
+    private String courseUuid;
 
     //과정 uuid
-    private String subject;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "subjectUuid")
+    private Subject subject;
 
     //커리큘럼 이름,설명,영상주소
     private String name;
@@ -27,7 +29,9 @@ public class SubjectCourse extends BaseTimeAndAuthorEntity {
     private String location;
 
     //영상 링크
-    private String video;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "videoUuid")
+    private Video video;
 
 
 }

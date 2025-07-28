@@ -15,7 +15,7 @@ public class Subject extends BaseTimeAndAuthorEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(length = 36,updatable = false, nullable = false)
-    private String uuid;
+    private String subjectUuid;
     private String name;
     private String description;
 

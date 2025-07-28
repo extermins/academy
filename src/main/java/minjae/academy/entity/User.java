@@ -23,7 +23,7 @@ public class User extends BaseTimeAndAuthorEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(length = 36,updatable = false, nullable = false)
-    private String uuid;
+    private String userUuid;
 
     // 개인정보
     private String name;
