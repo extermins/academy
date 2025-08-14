@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <link rel="stylesheet" href="css/incl/header.css"/>-->
+<!--    공통으로사용할 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <th:block layout:fragment="script"></th:block>
+    <th:block layout:fragment="css"></th:block>
+</head>
+<body>
+
+    <div th:replace="~{incl/header::header}"></div>
+
+    <div layout:fragment="content">
+
+    </div>
+    <div th:replace="~{incl/footer::footer}"></div>
+</body>
+</html>
