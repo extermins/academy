@@ -36,7 +36,7 @@
 
         <!-- 약관 내용 및 개별 동의 -->
         <!--수정해야함 join/join 하면 안됨 term 이후 koin 으로 다이렉트 -->
-        <form th:action="@{/join/term}" th:object="${memberDto}" method="post" id="termForm" class="space-y-4">
+        <form th:action="@{/join/step1}" th:object="${memberDto}" method="post" id="termForm" class="space-y-4">
             <!-- 개별 동의 체크박스 -->
             <div class="space-y-2 mt-10">
                 <div class="flex items-center">

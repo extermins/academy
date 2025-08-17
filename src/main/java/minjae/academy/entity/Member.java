@@ -22,7 +22,8 @@ public class Member extends BaseEntity {
 
     // 개인정보
     private String name;
-    private String id;
+    @Column(unique = true)
+    private String loginId;
     private String password;
     private String email;
     private String phone;

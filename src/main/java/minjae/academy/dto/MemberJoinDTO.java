@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class MemberJoinDTO {
     private String name;
-    private String id;
+    private String loginId;
     private String password;
     private String email;
     private String phone;

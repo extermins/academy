@@ -13,4 +13,8 @@ public class MemberService {
     public void save(Member member) {
         memberJpaRepository.save(member);
     }
+
+    public boolean existsByLoginId(String loginId) {
+        return memberJpaRepository.existsByLoginId(loginId);
+    }
 }
