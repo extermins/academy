@@ -45,7 +45,7 @@ public class TestController {
         Member member = new Member();
         member.setName(dto.getName());
         member.setLoginId(dto.getLoginId());
-        member.setPassword(dto.getPassword()); // 실제로는 반드시 BCrypt 암호화 필요
+        member.setPassword(dto.getPassword()); // 실제로는 반드시 BCrypt 암호화 필요 ---> 나중에 합시다
         member.setEmail(dto.getEmail());
         member.setPhone(dto.getPhone());
         member.setBirthday(java.sql.Date.valueOf(dto.getBirthday()));
@@ -59,6 +59,8 @@ public class TestController {
         member.setThirdSubscribe(dto.getThirdSubscribe());
         member.setTermPersonal(dto.getTermPersonal());
         member.setTermService(dto.getTermService());
+
+
         System.out.println(dto.getThirdSubscribe());
         System.out.println(dto.getTermPersonal());
         System.out.println(dto.getTermService());

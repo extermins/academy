@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class AdminController {
     @GetMapping("/admin")
     public String admin(HttpSession session) {
-        if(session.getAttribute("member") == null) {
-            return "redirect:/login";
-        }
+//        if(session.getAttribute("member") == null) {
+//            return "redirect:/login";
+//        }
         return "admin/admin";
     }
 }
